@@ -476,3 +476,8 @@ Through these exercises, the project demonstrates practical implementation of:
 - Environment variable management.
 - Backend and frontend integration.
 
+## Sample Output
+![Register & Login Forms](image.png)
+
+![Dashboard](image-1.png)
+
