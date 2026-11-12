@@ -4,6 +4,7 @@ import LoginForm from "./components/LoginForm";
 import RegisterForm from "./components/RegisterForm";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Dashboard from "./components/Dashboard";
+import GoogleCallback from "./pages/GoogleCallback";
 
 import { useAuth } from "./context/AuthContext";
 
@@ -35,6 +36,8 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
+        
+        <Route path="/oauth/callback" element={<GoogleCallback />} />
 
         <Route
           path="/dashboard"

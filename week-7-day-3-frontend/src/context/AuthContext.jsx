@@ -25,13 +25,13 @@ export function AuthProvider({ children }) {
   );
 
   // Save the user and token after successful login or registration.
-  const login = (newToken, newUser) => {
+  const login = useCallback((newToken, newUser) => {
     localStorage.setItem("token", newToken);
     localStorage.setItem("user", JSON.stringify(newUser));
 
     setToken(newToken);
     setUser(newUser);
-  };
+  }, []);
 
   // Remove authentication information.
   const logout = useCallback(() => {

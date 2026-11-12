@@ -3,6 +3,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useAuth } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
+import GoogleAuthButton from "./GoogleAuthButton";
 
 function LoginForm() {
   const [email, setEmail] = useState("");
@@ -133,6 +134,13 @@ function LoginForm() {
           {loading ? "Logging in..." : "Login"}
         </button>
       </form>
+
+      {/* Separate email/password login from Google login. */}
+      <div className="auth-divider">
+        <span>OR</span>
+      </div>
+
+      <GoogleAuthButton />
     </div>
   );
 }

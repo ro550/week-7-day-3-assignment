@@ -3,6 +3,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useAuth } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
+import GoogleAuthButton from "./GoogleAuthButton";
 
 function RegisterForm() {
   const [name, setName] = useState("");
@@ -248,6 +249,13 @@ function RegisterForm() {
           {loading ? "Registering..." : "Register"}
         </button>
       </form>
+
+      {/* Separate email/password registration from Google login. */}
+      <div className="auth-divider">
+        <span>OR</span>
+      </div>
+
+      <GoogleAuthButton />
     </div>
   );
 }
